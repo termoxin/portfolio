@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "start-dev": "NODE_DEBUG=server nodemon index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/termoxin/portlfolio-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/termoxin/portlfolio-backend/issues"
+  },
+  "homepage": "https://github.com/termoxin/portlfolio-backend#readme",
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "mocha": "^6.1.4"
+  }
+}

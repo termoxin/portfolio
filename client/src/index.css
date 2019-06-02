@@ -1,0 +1,57 @@
+*,
+*:before,
+*:after,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+#root,
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.part {
+  margin-top: 100px;
+}
+
+.octo,
+.octo div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+}
+.octo {
+  transform: rotate(45deg);
+}
+.octo1 {
+  transform: rotate(-45deg);
+}
