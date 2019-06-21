@@ -3,6 +3,7 @@ import styled from "styled-components";
 import GithubCircleIcon from "mdi-react/GithubCircleIcon";
 import InstagramIcon from "mdi-react/InstagramIcon";
 import TelegramIcon from "mdi-react/TelegramIcon";
+import { Link } from "react-router-dom";
 
 const Github = styled(GithubCircleIcon)`
   fill: #fff;
@@ -21,6 +22,15 @@ const Telegram = styled(TelegramIcon)`
   width: 40px;
   height: auto;
 `;
+
+const StyledLink = styled(Link)`
+  color: white;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+`
 
 const Icon = styled.div`
   cursor: pointer;
@@ -43,7 +53,7 @@ const Footer = styled.footer`
   height: 200px;
 `;
 
-const Link = styled.a``;
+const LinkToSocial = styled.a``;
 
 const SocialIcons = styled.div`
   width: 50%;
@@ -66,24 +76,29 @@ export default () => (
   <Footer>
     <SocialIcons>
       <Icon>
-        <Link href="https://github.com/termoxin" __blank={blank.toString()}>
+        <LinkToSocial
+          href="https://github.com/termoxin"
+          __blank={blank.toString()}
+        >
           <Github />
-        </Link>
+        </LinkToSocial>
       </Icon>
       <Icon>
-        <Link
+        <LinkToSocial
           href="https://instagram.com/rostislav.futornoy/"
           __blank={blank.toString()}
         >
           <Instagram />
-        </Link>
+        </LinkToSocial>
       </Icon>
       <Icon>
-        <Link href="https://t.me/termoxin" __blank={blank.toString()}>
+        <LinkToSocial href="https://t.me/termoxin" __blank={blank.toString()}>
           <Telegram />
-        </Link>
+        </LinkToSocial>
       </Icon>
     </SocialIcons>
-    <Copyright>Rostislav Futornoy {new Date().getFullYear()}</Copyright>
+    <Copyright>
+      <StyledLink to="/auth">Rostislav Futornoy {new Date().getFullYear()}</StyledLink>
+    </Copyright>
   </Footer>
 );

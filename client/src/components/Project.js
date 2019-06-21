@@ -3,11 +3,7 @@ import styled from "styled-components";
 
 const Project = styled.div`
   margin: 50px 20px 0 20px;
-  width: 20%;
-
-  @media (max-width: 1024px) {
-    width: 40%;
-  }
+  width: 40%;
 
   @media (max-width: 800px) {
     width: 90%;
@@ -20,10 +16,10 @@ const ProjectWrapper = styled.div`
   font-size: 24px;
   align-items: center;
   color: #fff;
-  height: 200px;
+  height: 300px;
   width: 100%;
   background: #252934;
-  transition: 0.3s transform;
+  transition: 0.7s transform;
   transform-style: preserve-3d;
   transform: ${props =>
     props.side === "front" ? "rotateY(0)" : "rotateY(180deg)"};
@@ -102,7 +98,7 @@ class ProjectComponent extends Component {
           <Front image={image} />
           <Back>
             <Name>
-              <a href={source} alt={name}  __blank={"true"}>
+              <a href={source} alt={name} __blank={"true"}>
                 {name}
               </a>
             </Name>

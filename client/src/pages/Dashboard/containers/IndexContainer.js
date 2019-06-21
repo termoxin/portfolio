@@ -6,12 +6,17 @@ import { getMessages, getProjects } from "../actions";
 import { withRouter } from "react-router-dom";
 import Index from "../components/Index";
 import throttle from "../../../helpers/throttle";
+import { getItem } from "../../../helpers/localStorage";
 
 class IndexContainer extends Component {
   componentDidMount() {
-    const { identifyUser } = this.props;
+    const { identifyUser, history } = this.props;
 
-    identifyUser();
+    if (getItem("token")) {
+      identifyUser();
+    } else {
+      history.push("/auth");
+    }
   }
 
   handleRefresh = throttle(() => {

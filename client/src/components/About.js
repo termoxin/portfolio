@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const About = styled.div`
   display: flex;
@@ -77,7 +76,7 @@ const Item = styled.li`
   }
 
   &:after {
-     display: block;
+    display: block;
     content: "";
     width: 0;
     position: relative;
@@ -104,7 +103,7 @@ export default () => (
     <div className="part">
       <div className="octo">
         <div className="octo1">
-          <Link to="/auth"><Photo src="public/img/avatar.jpg" /></Link>
+          <Photo src="public/img/avatar.jpg" />
         </div>
       </div>
     </div>
@@ -112,11 +111,11 @@ export default () => (
       <Header>Skills</Header>
       <List>
         <Item percentage={90}>HTML</Item>
-        <Item percentage={70}>CSS</Item>
-        <Item percentage={70}>JAVASCRIPT</Item>
-        <Item percentage={50}>REACT, REDUX</Item>
-        <Item percentage={50}>NODE.JS</Item>
-        <Item percentage={20}>GIT, WEBPACK</Item>
+        <Item percentage={75}>CSS</Item>
+        <Item percentage={75}>JAVASCRIPT</Item>
+        <Item percentage={75}>REACT, REDUX</Item>
+        <Item percentage={70}>NODE.JS</Item>
+        <Item percentage={75}>GIT, WEBPACK</Item>
       </List>
     </Skills>
   </About>
