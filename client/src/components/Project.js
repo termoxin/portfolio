@@ -33,6 +33,11 @@ const Side = styled.div`
   width: 100%;
   height: 100%;
   text-align: center;
+
+  p {
+    text-align:left;
+        padding: 0 25px 20px 25px;
+  }
 `;
 
 const Front = styled(Side)`
@@ -53,7 +58,9 @@ const Name = styled.h2`
   }
 `;
 
-const Description = styled.p``;
+const Description = styled.p`
+  font-size:16px;
+`;
 
 const Back = styled(Side)`
   display: flex;
@@ -110,4 +117,9 @@ class ProjectComponent extends Component {
   }
 }
 
+
 export default ProjectComponent;
+
+
+
+

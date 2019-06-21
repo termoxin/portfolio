@@ -1,1 +1,1 @@
-{"id":"edv3cxm1t9x0vybby8ie","name":"React-Poll","description":"The React library serves to create the polls","image":"public/img/poll.png","source":null,"type":"react"}
+{"id":"edv3cxm1t9x0vybby8ie","name":"React-Poll","description":"A simple React component to create your own polls with React. You can insert your data to one and then get result. It will calculate how much correct and wrong answers you have. It shows you a proportion between ones.","image":"public/img/poll.png","source":"https://github.com/termoxin/react-poll","type":"react"}
