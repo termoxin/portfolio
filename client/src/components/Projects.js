@@ -12,8 +12,7 @@ const ProjectsWrapper = styled.div`
 
 const Projects = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;
   flex-wrap: wrap;
   perspective: 10em;
   width: 100%;

@@ -30,7 +30,7 @@ class ProjectsContainer extends Component {
 
     if (!filter) return projects;
 
-    return projects.filter(project => project.type === filter);
+    return projects.filter(({ type }) => type.split(",").indexOf(filter) > -1);
   };
 
   render() {

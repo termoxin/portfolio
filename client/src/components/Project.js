@@ -13,8 +13,8 @@ const Project = styled.div`
 const ProjectWrapper = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 24px;
   align-items: center;
+  font-size: 24px;
   color: #fff;
   height: 300px;
   width: 100%;

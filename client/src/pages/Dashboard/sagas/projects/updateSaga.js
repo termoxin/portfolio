@@ -11,8 +11,6 @@ export default function* updateProjects(action) {
       token: id
     });
 
-    console.log(response);
-
     yield put({ type: "UPDATE_PROJECTS_SUCCESS" });
   } catch (err) {
     yield put({ type: "UPDATE_PROJECTS_FAILURE", err: err.response.data });
