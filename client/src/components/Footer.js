@@ -3,6 +3,7 @@ import styled from "styled-components";
 import GithubCircleIcon from "mdi-react/GithubCircleIcon";
 import InstagramIcon from "mdi-react/InstagramIcon";
 import TelegramIcon from "mdi-react/TelegramIcon";
+
 import { Link } from "react-router-dom";
 
 const Github = styled(GithubCircleIcon)`
@@ -30,7 +31,7 @@ const StyledLink = styled(Link)`
     color: white;
     text-decoration: none;
   }
-`
+`;
 
 const Icon = styled.div`
   cursor: pointer;
@@ -76,29 +77,28 @@ export default () => (
   <Footer>
     <SocialIcons>
       <Icon>
-        <LinkToSocial
-          href="https://github.com/termoxin"
-          __blank={blank.toString()}
-        >
+        <LinkToSocial href="https://github.com/termoxin" target="__blank">
           <Github />
         </LinkToSocial>
       </Icon>
       <Icon>
         <LinkToSocial
           href="https://instagram.com/rostislav.futornoy/"
-          __blank={blank.toString()}
+          target="__blank"
         >
           <Instagram />
         </LinkToSocial>
       </Icon>
       <Icon>
-        <LinkToSocial href="https://t.me/termoxin" __blank={blank.toString()}>
+        <LinkToSocial href="https://t.me/termoxin" target="__blank">
           <Telegram />
         </LinkToSocial>
       </Icon>
     </SocialIcons>
     <Copyright>
-      <StyledLink to="/auth">Rostislav Futornoy {new Date().getFullYear()}</StyledLink>
+      <StyledLink to="/auth">
+        Rostislav Futornoy {new Date().getFullYear()}
+      </StyledLink>
     </Copyright>
   </Footer>
 );

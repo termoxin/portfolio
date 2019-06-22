@@ -1,9 +1,35 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import LinkIcon from "mdi-react/LinkIcon";
+import GithubCircleIcon from "mdi-react/GithubCircleIcon";
+
+const Link = styled(LinkIcon)`
+  position: absolute;
+  top:10px
+  left:10px;
+  fill: #fff;
+  width: 30px;
+  height: auto;
+`;
+
+const Github = styled(GithubCircleIcon)`
+  position: absolute;
+  top:10px
+  right:10px;
+  fill: #fff;
+  width: 30px;
+  height: auto;
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+`;
+
+const Button = styled.a``;
 
 const Project = styled.div`
   margin: 50px 20px 0 20px;
-  width: 40%;
+  width: 45%;
 
   @media (max-width: 800px) {
     width: 90%;
@@ -35,8 +61,8 @@ const Side = styled.div`
   text-align: center;
 
   p {
-    text-align:left;
-        padding: 0 25px 20px 25px;
+    text-align: left;
+    padding: 0 25px 20px 25px;
   }
 `;
 
@@ -59,7 +85,7 @@ const Name = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size:16px;
+  font-size: 16px;
 `;
 
 const Back = styled(Side)`
@@ -95,6 +121,7 @@ class ProjectComponent extends Component {
   render() {
     const { side } = this.state;
     const { name, back, image, source } = this.props;
+    const blank = "true";
 
     return (
       <Project
@@ -104,12 +131,16 @@ class ProjectComponent extends Component {
         <ProjectWrapper side={side}>
           <Front image={image} />
           <Back>
-            <Name>
-              <a href={source} alt={name} __blank={"true"}>
-                {name}
-              </a>
-            </Name>
+            <Name>{name}</Name>
             <Description>{back}</Description>
+            <ButtonGroup>
+              <Button href={source} target="__blank">
+                <Link />
+              </Button>
+              <Button href={source} target="__blank">
+                <Github />
+              </Button>
+            </ButtonGroup>
           </Back>
         </ProjectWrapper>
       </Project>
@@ -117,9 +148,4 @@ class ProjectComponent extends Component {
   }
 }
 
-
 export default ProjectComponent;
-
-
-
-
