@@ -6,7 +6,7 @@ export default function* updateProjects(action) {
   try {
     const { id } = getItem("token");
 
-    const response = yield call(updatingProjects, {
+    yield call(updatingProjects, {
       projects: action.payload,
       token: id
     });

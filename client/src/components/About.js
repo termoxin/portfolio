@@ -4,15 +4,39 @@ import styled from "styled-components";
 const About = styled.div`
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  flex-flow: column nowrap;
   color: #444649;
   margin-top: 15px;
-  padding-right: 14%;
   overflow: hidden;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
     padding-right: 0;
+  }
+`;
+
+const Info = styled.div`
+  display: flex;
+  padding: 0 70px 0 70px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    padding: 0 10px 0 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 16px;
+  padding: 10px 10px 0 10px;
+  margin-top: 70px;
+  line-height:1.4;
+  width: 75%;
+
+  @media (max-width: 1024px) {
+    width: 95%;
   }
 `;
 
@@ -33,38 +57,40 @@ const Skills = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  width: 40%;
-  margin: 0 10px 0 10px;
+  margin-top: 100px;
+  padding: 10px 20px 0 20px;
+  width: 100%;
 
   @media (max-width: 768px) {
-    width: 100%;
     margin-top: 40px;
   }
 `;
-const Header = styled.h1``;
+const Header = styled.h1`
+  text-align: center;
+`;
 
 const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 45px 0 45px;
+
   @media (max-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+   padding: 10px 20px 0 20px;
   }
 `;
 
 const Item = styled.li`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   font-size: 24px;
-  cursor: pointer;
-  width: 180%;
+  width: 45%;
   margin-top: 40px;
   padding-bottom: 5px;
 
-  @media (max-width: 768px) {
-    width: 45%;
-  }
-
-  @media (max-width: 420px) {
+  @media (max-width: 568px) {
     width: 100%;
   }
 
@@ -100,13 +126,20 @@ const Item = styled.li`
 
 export default () => (
   <About>
-    <div className="part">
-      <div className="octo">
-        <div className="octo1">
-          <Photo src="public/img/avatar.jpg" />
+    <Info>
+      <div className="part">
+        <div className="octo">
+          <div className="octo1">
+            <Photo src="public/img/avatar.jpg" />
+          </div>
         </div>
       </div>
-    </div>
+
+      <Description>
+        I’m Rostislav, a 17 years old self-taught full-stack developer, from Ukraine. I quickly started to love Javascript. I’ve been studying Front-end development full time. During this time, I took online courses like Advanced CSS, Flexbox,The Complete Javascript Course, and also watched countless youtube videos about Javascript. Because we know the best way to learn is to practice, I also did a bunch of personal projects with the knowledge I gathered from the courses, you can check them on my portfolio. I always want to learn more, do more, and be more. I’m hard working, super curious, passionate, committed, and also a fast learner!
+      </Description>
+    </Info>
+
     <Skills>
       <Header>Skills</Header>
       <List>

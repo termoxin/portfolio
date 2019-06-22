@@ -94,9 +94,9 @@ export default class Hello extends Component {
         <canvas className="background" />
         <Text>
           <p>
-            Hello, I'm <Name>Rostislav Futornoy</Name>
+            Hello, I'm <Name>Rostislav </Name>
           </p>
-          <p>I'm a full-stack web developer. </p>
+          <p>I'm a Front-end web developer. </p>
         </Text>
         <Button
           onMouseEnter={this.handleMouseEnter}
