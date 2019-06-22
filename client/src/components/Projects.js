@@ -12,7 +12,7 @@ const ProjectsWrapper = styled.div`
 
 const Projects = styled.div`
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
   perspective: 10em;
   width: 100%;
@@ -72,15 +72,18 @@ const ProjectsComponent = ({ projects, loading, applyFilter }) => (
       "LOADING..."
     ) : (
       <Projects>
-        {projects.map((project, index) => (
-          <Project
-            key={project.id}
-            name={project.name}
-            back={project.description}
-            image={project.image}
-            source={project.source}
-          />
-        ))}
+        {projects.map(
+          ({ id, name, description, image, source, code }, index) => (
+            <Project
+              key={id}
+              name={name}
+              back={description}
+              image={image}
+              source={source}
+              code={code}
+            />
+          )
+        )}
       </Projects>
     )}
   </ProjectsWrapper>

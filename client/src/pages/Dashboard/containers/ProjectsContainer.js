@@ -22,7 +22,8 @@ class ProjectsContainer extends Component {
       description: "",
       type: "",
       image: "",
-      source: ""
+      source: "",
+      code: ""
     };
   }
 
@@ -86,11 +87,11 @@ class ProjectsContainer extends Component {
   };
 
   handleSubmit = throttle(() => {
-    const { name, description, type, image, source } = this.state;
+    const { name, description, type, image, source, code } = this.state;
     const { createProject, getProjects, loading } = this.props;
 
     if (name && description && type) {
-      createProject({ name, description, type, image, source });
+      createProject({ name, description, type, image, source, code });
       this.handleOnClose();
 
       if (!loading) {

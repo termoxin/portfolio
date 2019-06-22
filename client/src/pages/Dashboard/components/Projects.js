@@ -82,6 +82,18 @@ class Projects extends Component {
       );
     };
 
+    const cellCode = (rowIndex, columnIndex) => {
+      const code = projects[rowIndex].code;
+      return (
+        <EditableCell
+          value={code}
+          rowIndex={rowIndex}
+          columnIndex={columnIndex}
+          onChange={handleCellChange}
+        />
+      );
+    };
+
     const cellType = (rowIndex, columnIndex) => {
       const type = projects[rowIndex].type;
       return (
@@ -118,6 +130,7 @@ class Projects extends Component {
           <Column name="Image" cellRenderer={cellImage} />
           <Column name="Source" cellRenderer={cellSrc} />
           <Column name="Type" cellRenderer={cellType} />
+          <Column name="Code" cellRenderer={cellCode} />
         </Table>
 
         <ModalCreate

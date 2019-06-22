@@ -21,6 +21,7 @@ class Create extends Component {
         />
         <InputGroup placeholder="Type" name="type" onChange={handleChange} />
         <InputGroup placeholder="Image" name="image" onChange={handleChange} />
+        <InputGroup placeholder="Code" name="code" onChange={handleChange} />
         <InputGroup
           placeholder="Source"
           name="source"

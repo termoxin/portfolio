@@ -25,9 +25,9 @@ ProjectController.index = (data, callback) => {
 };
 
 ProjectController.store = (data, callback) => {
-  const { name, description, image, type, source } = data.body;
+  const { name, description, image, type, source, code } = data.body;
 
-  Project.createProject(name, description, image, type, source, err => {
+  Project.createProject(name, description, image, type, source, code, err => {
     if (!err) {
       callback(202);
     } else {
@@ -37,10 +37,10 @@ ProjectController.store = (data, callback) => {
 };
 
 ProjectController.update = (data, callback) => {
-  const { name, description, image, source } = data.body;
+  const { name, description, image, source, code } = data.body;
   const { token } = data.headers;
 
-  Project.updateProject(name, description, image, source, token, err => {
+  Project.updateProject(name, description, image, source, token, code, err => {
     if (!err) {
       callback(202);
     } else {

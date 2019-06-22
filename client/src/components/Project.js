@@ -120,7 +120,7 @@ class ProjectComponent extends Component {
 
   render() {
     const { side } = this.state;
-    const { name, back, image, source } = this.props;
+    const { name, back, image, source, code } = this.props;
     const blank = "true";
 
     return (
@@ -134,12 +134,12 @@ class ProjectComponent extends Component {
             <Name>{name}</Name>
             <Description>{back}</Description>
             <ButtonGroup>
-              <Button href={source} target="__blank">
+              {source ? <Button href={source} target="__blank">
                 <Link />
-              </Button>
-              <Button href={source} target="__blank">
+              </Button> : ""}
+              {code ? <Button href={code} target="__blank">
                 <Github />
-              </Button>
+              </Button> : ""}
             </ButtonGroup>
           </Back>
         </ProjectWrapper>

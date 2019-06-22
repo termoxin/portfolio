@@ -49,11 +49,12 @@ class Project {
     }
   }
 
-  static createProject(name, description, image, type, source, callback) {
+  static createProject(name, description, image, type, source, code, callback) {
     name = typeof name === "string" && name.length >= 3 ? name : "";
     description = typeof description === "string" ? description : "";
     image = image ? image : null;
     source = source ? source : null;
+    code = code ? code : null;
     type = type ? type : null;
 
     if (name && description && type) {
@@ -65,7 +66,8 @@ class Project {
         description,
         image,
         source,
-        type
+        type,
+        code
       };
 
       _data.create("projects", name, data, err => {
@@ -80,17 +82,19 @@ class Project {
     }
   }
 
-  static updateProject(name, description, image, source, token, callback) {
+  static updateProject(name, description, image, source, token, code, callback) {
     name = typeof name === "string" && name.length >= 3 ? name : "";
     description = typeof description === "string" ? description : "";
     image = image ? image : null;
     source = source ? source : null;
+    code = source ? source : null;
 
     const data = {
       name,
       description,
       image,
-      source
+      source,
+      code
     };
 
     helpers.verifyToken(token, async (statusCode, err, isAdmin) => {
