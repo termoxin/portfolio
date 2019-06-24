@@ -86,6 +86,10 @@ const Name = styled.h2`
 
 const Description = styled.p`
   font-size: 16px;
+
+  @media(max-width: 420px) {
+    font-size: 14px;
+  }
 `;
 
 const Back = styled(Side)`
@@ -121,7 +125,6 @@ class ProjectComponent extends Component {
   render() {
     const { side } = this.state;
     const { name, back, image, source, code } = this.props;
-    const blank = "true";
 
     return (
       <Project

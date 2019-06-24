@@ -29,7 +29,7 @@ const Info = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 16px;
+  font-size: 20px;
   padding: 10px 10px 0 10px;
   margin-top: 70px;
   line-height:1.4;
@@ -136,7 +136,11 @@ export default () => (
       </div>
 
       <Description>
-        I’m Rostislav, a 17 years old self-taught full-stack developer, from Ukraine. I quickly started to love Javascript. I’ve been studying Front-end development full time. During this time, I took online courses like Advanced CSS, Flexbox,The Complete Javascript Course, and also watched countless youtube videos about Javascript. Because we know the best way to learn is to practice, I also did a bunch of personal projects with the knowledge I gathered from the courses, you can check them on my portfolio. I always want to learn more, do more, and be more. I’m hard working, super curious, passionate, committed, and also a fast learner!
+        I’m Rostislav, a 17 years old self-taught Front-end developer, from Ukraine.
+I quickly started to love Javascript. I’ve been studying Front-end development
+full time. Because we know the best way to learn is to practice. I always want
+to learn more, do more, and be more. I’m hard working, super curious, passionate,
+and also a fast learner!
       </Description>
     </Info>
 

@@ -71,7 +71,6 @@ const Copyright = styled.p`
   font-weight: 700;
 `;
 
-const blank = "true";
 
 export default () => (
   <Footer>
